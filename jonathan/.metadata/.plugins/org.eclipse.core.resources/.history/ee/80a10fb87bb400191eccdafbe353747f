@@ -1,0 +1,12 @@
+package br.com.jonathan.service;
+
+import javax.ejb.Local;
+
+import br.com.jonathan.model.Usuario;
+
+@Local
+public interface UsuarioDAOLocal {
+
+	public Usuario getUsuario(String nomeUsuario, String senha);
+
+}

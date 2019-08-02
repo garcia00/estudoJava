@@ -72,32 +72,41 @@
 					<center>
 						<h:panelGrid columns="3" style="text-align: center;">
 
-							<h:outputText value="login "
-								style="font-size: 16px !important; font-weight: bold !important;" />
-							<h:inputText id="login" value="#{loginMB.usuario.login}" styleClass="form-control" size="30"
-								style="padding-left: 3px !important;  margin-left: 3px !important;" />
+							<h:outputText value="login " style="font-size: 16px !important; font-weight: bold !important;"/>						
+							<h:inputText styleClass="form-control" size="30"
+										 style="padding-left: 3px !important;  margin-left: 3px !important;"
+										 id="nomeCompleto" value="#{LoginMB.usuario.nomeCompleto}"/>
 
 							<p:spacer height="45"></p:spacer>
 
-							<h:outputText value="senha "
+							<h:outputText value="Senha"
 								style="font-size: 16px !important; font-weight: bold !important; " />
-							<h:inputSecret id="senha" value="#{loginMB.usuario.senha}" styleClass="form-control" size="30"
+							<h:inputSecret id="senha" value="#{LoginMB.usuario.senha}" styleClass="form-control" size="30"
 								style="padding-left: 3px !important; margin-left: 3px !important;" />
 
 							<p:spacer height="45"></p:spacer>
 
 						</h:panelGrid>
 					</center>
-
+							
 					<div class="form-actions">
-						<p:commandButton value="ACESSAR" action=""
+						<p:commandButton value="ACESSAR"
 							styleClass="signin-btn bg-primary" update="@form"
 							onstart="PF('dialogProcessando').show();"
 							oncomplete="PF('dialogProcessando').hide();"
 							onsuccess="PF('dialogProcessando').hide();"
-							onerror="PF('dialogProcessando').hide();" />
+							onerror="PF('dialogProcessando').hide();" action="#{LoginMB.envia()}" />
+							
+						<p:commandButton value="CADASTRAR"
+						styleClass="signin-btn bg-primary" update="@form"
+							action="#{sessionControl.redirect(cadastro)}"
+							onstart="PF('dialogProcessando').show();"
+							oncomplete="PF('dialogProcessando').hide();"
+							onsuccess="PF('dialogProcessando').hide();"
+							onerror="PF('dialogProcessando').hide();" />		
 
 					</div>
+									
 					<!-- / .form-actions -->
 
 					<p:dialog widgetVar="dialogProcessando" modal="true"

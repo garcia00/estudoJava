@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.1.4/jackson-core-2.1.4.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/rewrite/rewrite-config-prettyfaces/2.0.12.Final/rewrite-config-prettyfaces-2.0.12.Final.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-rewrite-config-prettyfaces-2.0.12.Final.jar/meta-inf/faces-config.xml" project="jonathan"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-rewrite-config-prettyfaces-2.0.12.Final.jar/meta-inf/ocpsoft-pretty-faces.taglib.xml" project="jonathan"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-rewrite-config-prettyfaces-2.0.12.Final.jar/meta-inf/ocpsoft-pretty-faces.tld" project="jonathan"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.5.1/lucene-analyzers-common-4.5.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/lucene/lucene-queryparser/4.5.1/lucene-queryparser-4.5.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/hibernate/hibernate-entitymanager/4.2.7.Final/hibernate-entitymanager-4.2.7.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/rewrite/rewrite-api-servlet/2.0.12.Final/rewrite-api-servlet-2.0.12.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/hibernate/hibernate-core/4.2.7.Final/hibernate-core-4.2.7.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/rewrite/rewrite-servlet/2.0.12.Final/rewrite-servlet-2.0.12.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/joda-time/joda-time/2.8/joda-time-2.8.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/javax/enterprise/cdi-api/1.2/cdi-api-1.2.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/poi/poi/3.13/poi-3.13.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/jboss/spec/javax/servlet/jboss-servlet-api_3.0_spec/1.0.2.Final/jboss-servlet-api_3.0_spec-1.0.2.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/xml-apis/xml-apis/1.3.02/xml-apis-1.3.02.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/lucene/lucene-core/4.5.1/lucene-core-4.5.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/common/common-api/1.0.5.Final/common-api-1.0.5.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/bouncycastle/bctsp-jdk14/1.38/bctsp-jdk14-1.38.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/javax/el/javax.el-api/3.0.0/javax.el-api-3.0.0.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.1.4/jackson-annotations-2.1.4.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/logging/logging-api/1.0.2.Final/logging-api-1.0.2.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/net/sf/jasperreports/jasperreports-fonts/5.6.1/jasperreports-fonts-5.6.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/jboss/ejb3/jboss-ejb3-ext-api/2.2.0.Final/jboss-ejb3-ext-api-2.2.0.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/codehaus/castor/castor/1.2/castor-1.2.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/primefaces/primefaces/6.2/primefaces-6.2.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-6.2.jar/meta-inf/faces-config.xml" project="jonathan"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-6.2.jar/meta-inf/primefaces-p.taglib.xml" project="jonathan"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-6.2.jar/meta-inf/primefaces-pm.taglib.xml" project="jonathan"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/bouncycastle/bcprov-jdk14/138/bcprov-jdk14-138.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/rewrite/rewrite-integration-faces/2.0.12.Final/rewrite-integration-faces-2.0.12.Final.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-rewrite-integration-faces-2.0.12.Final.jar/meta-inf/faces-config.xml" project="jonathan"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/lucene/lucene-sandbox/4.5.1/lucene-sandbox-4.5.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.1.4/jackson-databind-2.1.4.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/net/sourceforge/jexcelapi/jxl/2.6.12/jxl-2.6.12.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/jboss/spec/javax/ejb/jboss-ejb-api_3.1_spec/1.0.2.Final/jboss-ejb-api_3.1_spec-1.0.2.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/rewrite/rewrite-addressbuilder/2.0.12.Final/rewrite-addressbuilder-2.0.12.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/commons-lang/commons-lang/2.3/commons-lang-2.3.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/eclipse/jdtcore/3.1.0/jdtcore-3.1.0.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/jfree/jcommon/1.0.15/jcommon-1.0.15.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/rewrite/rewrite-api/2.0.12.Final/rewrite-api-2.0.12.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/com/microsoft/ews-java-api/ews-java-api/2.0/ews-java-api-2.0.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar"/>
+  <path value="/jonathan/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="jonathan"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/net/sourceforge/barbecue/barbecue/1.5-beta1/barbecue-1.5-beta1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/net/sf/jasperreports/jasperreports/5.6.0/jasperreports-5.6.0.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/junit/junit/4.12/junit-4.12.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_1.1_spec/1.0.1.Final/jboss-jaxrs-api_1.1_spec-1.0.1.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/rewrite/rewrite-annotations-api/2.0.12.Final/rewrite-annotations-api-2.0.12.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/javax/faces/jsf-api/2.1/jsf-api-2.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/lucene/lucene-queries/4.5.1/lucene-queries-4.5.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/ocpsoft/rewrite/rewrite-annotations-impl/2.0.12.Final/rewrite-annotations-impl-2.0.12.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/apache/commons/commons-text/1.6/commons-text-1.6.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/com/lowagie/itext/2.1.7.js2/itext-2.1.7.js2.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.2.Final/hibernate-commons-annotations-4.0.2.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/hibernate/hibernate-annotations/3.5.6-Final/hibernate-annotations-3.5.6-Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/bouncycastle/bcmail-jdk14/138/bcmail-jdk14-138.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/jfree/jfreechart/1.0.12/jfreechart-1.0.12.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/bouncycastle/bcmail-jdk14/1.38/bcmail-jdk14-1.38.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/javax/interceptor/javax.interceptor-api/1.2/javax.interceptor-api-1.2.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.jar"/>
+  <path value="C:/Users/Desenvolve Cidade/.m2/repository/org/bouncycastle/bcprov-jdk14/1.38/bcprov-jdk14-1.38.jar"/>
+ </paths>
+ <validation>
+  <el/>
+ </validation>
+ <aliases/>
+ <includes/>
+ <uris/>
+</kb-project>

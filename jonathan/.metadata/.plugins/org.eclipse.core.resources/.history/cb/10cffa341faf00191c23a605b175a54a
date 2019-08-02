@@ -1,0 +1,117 @@
+package br.com.jonathan.control;
+
+import java.io.Serializable;
+import java.net.UnknownHostException;
+import java.util.Date;
+
+import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+import javax.inject.Inject;
+
+import org.apache.log4j.Logger;
+
+import br.jus.tjpa.capjus.control.padrao.BaseControl;
+import br.jus.tjpa.capjus.model.Cptusuario;
+import br.jus.tjpa.capjus.service.LoginServiceLocal;
+import br.jus.tjpa.capjus.util.Contexto;
+import br.jus.tjpa.capjus.util.Util;
+import br.jus.tjpa.capjus.ws.autenticacao.AutenticacaoDJEWS;
+import br.jus.tjpa.capjus.ws.autenticacao.Usuario;
+
+/**
+ * @author Renan Celso
+ */
+@ManagedBean(name = "loginControl")
+@ViewScoped
+public class LoginControl extends BaseControl implements Serializable {
+
+	private static final long serialVersionUID = 2012379265510504593L;
+	
+	private transient Logger log = Logger.getLogger(LoginControl.class.getSimpleName());	
+	
+	@Inject
+	private AutenticacaoDJEWS wsAutenticacao;
+		
+	private String login;
+	
+	private String senha;
+	
+	@EJB
+	private LoginServiceLocal loginService;
+	
+	@PostConstruct
+	public void init() {		
+		log.info("LoginControl init.");		
+	}	
+	
+	public String logar() {		
+		try {		
+			String resultado = wsAutenticacao.autenticar(Util.getIpCliente(), Util.getIpServidor(), login, senha, "", "");	
+			
+			if(resultado == null) {
+				log.error("Erro ao efetuar login. Resposta do servico: "+resultado);				
+				addErrorMessage("Erro ao efetuar login. ");				
+				return null;	
+			}
+			
+			if ("AUTENTICADO".equalsIgnoreCase(resultado)) {	
+				
+				Usuario usuario = (Usuario) Contexto.getSessao().getAttribute("usuarioLogado");		
+				
+				Cptusuario cptusuario = new Cptusuario();			
+				
+				cptusuario = loginService.buscarUsuarioPorNmUsuario(usuario.getLogin());
+				
+				if(cptusuario == null){
+					cptusuario = new Cptusuario();	
+					cptusuario.setDslogin(usuario.getLogin());
+					cptusuario.setDsperfil("ADMINISTRADOR");
+					cptusuario.setDtcadastro(new Date());
+					cptusuario.setFlativo("S");
+					cptusuario.setNmusuario(usuario.getLogin());	
+					
+					loginService.salvar(cptusuario);
+					
+					cptusuario = loginService.buscarUsuarioPorNmUsuario(usuario.getLogin());
+				} 
+								
+				Contexto.getSessao().setAttribute("cptusuario", cptusuario);				
+				Contexto.getSessao().setAttribute("perfilLogado", cptusuario.getDsperfil() != null ? cptusuario.getDsperfil() : "ADMINISTRADOR");
+				
+				//log.info("\n\nUSUÁRIO '"+usuario.getLogin()+"'>>> "+senha+" <<< VALIDADO COM SUCESSO. Vai logar no sistema.\n\n");
+				
+				redirect("/lista-editais");	
+				
+			} else {
+				addErrorMessage("Login e/ou senha inválidos.");				
+				return null;			
+			}			
+		} catch (UnknownHostException e) {		
+			addErrorMessage("UnknownHostException: Erro ao acessar servico de autenticacao.");
+			log.error(e);	
+		} catch (Exception e) {	
+			String[] str = e.getMessage().split(":");
+			addErrorMessage("Erro de autenticacao: "+str[str.length-1]);			
+			log.error(e);			
+		}		
+		return null;
+	}
+
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}	
+}

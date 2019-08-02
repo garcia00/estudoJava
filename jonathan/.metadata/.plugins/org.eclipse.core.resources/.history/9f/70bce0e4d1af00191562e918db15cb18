@@ -1,0 +1,18 @@
+package br.com.jonathan.service;
+
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class UsuarioService
+ */
+@Stateless
+public class UsuarioService implements UsuarioServiceLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public UsuarioService() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

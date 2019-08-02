@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:p="http://primefaces.org/ui">
+  
+<h:head>
+
+<meta charset="utf-8" />
+
+	<link rel="shortcut icon" href="publico/estilo/images/logo-j.png" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>JONATHAN</title>
+
+<link href="publico/estilo/stylesheets/bootstrap.css" rel="stylesheet"
+		type="text/css" />
+	<link href="publico/estilo/stylesheets/pixel-admin.css"
+		rel="stylesheet" type="text/css" />
+	<link href="publico/estilo/stylesheets/pages.css" rel="stylesheet"
+		type="text/css" />
+	<link href="publico/estilo/stylesheets/rtl.css" rel="stylesheet"
+		type="text/css" />
+	<link href="publico/estilo/stylesheets/themes.css" rel="stylesheet"
+		type="text/css" />
+  
+</h:head>
+  
+<h:body>
+<div class="signin-container">
+
+		<!-- Right side -->
+		<div class="signin-form">
+
+			<div style="text-align: center;">
+     <h:form>
+          <p:messages id="messages" />
+          <p:panelGrid columns="2">
+                               
+                <p:outputLabel for="nome" value="Nome:" />
+                <p:inputText id="nome" value="#{UsuarioMB.usuario.nome}" />
+    
+                <p:outputLabel for="senha" value="Senha:" />
+                <p:inputText id="senha" value="#{UsuarioMB.usuario.senha}" />
+  
+                <p:commandButton  value="Cadastrar" icon="ui-icon-star"
+                 action="#{UsuarioMB.cadastraUsuario}" update="messages">
+                </p:commandButton>
+  
+          </p:panelGrid>
+     </h:form>
+     </div>
+    
+</h:body>
+</html>

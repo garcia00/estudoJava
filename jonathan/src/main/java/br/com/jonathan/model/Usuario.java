@@ -40,12 +40,6 @@ public class Usuario implements Serializable {
 	@Column(name = "nome_completo", length = 255)
 	private String nomeCompleto;
 
-	@Column(name = "municipio", length = 255)
-	private String municipio;
-
-	@Column(name = "uf", length = 10)
-	private String uf;
-
 	@Column(name = "data_nascimento")
 	@Temporal(javax.persistence.TemporalType.DATE)
 	private Date dataNascimento;
@@ -53,8 +47,6 @@ public class Usuario implements Serializable {
 	@Column(name = "telefone", length = 50)
 	private Date telefone;
 
-	@Column(name = "ocupacao", length = 200)
-	private Date ocupacao;
 
 	@Column(name = "datahora_atualizacao")
 	@Temporal(javax.persistence.TemporalType.TIMESTAMP)
@@ -63,8 +55,6 @@ public class Usuario implements Serializable {
 	/**
 	 * A = Ativo I = Inativo
 	 */
-	@Column(name = "situacao", nullable = false, length = 10)
-	private String situacao;
 
 	@Column(name = "senha_nova", length = 255)
 	private String senhaNova;
@@ -113,21 +103,7 @@ public class Usuario implements Serializable {
 		this.nomeCompleto = nomeCompleto;
 	}
 
-	public String getMunicipio() {
-		return municipio;
-	}
-
-	public void setMunicipio(String municipio) {
-		this.municipio = municipio;
-	}
-
-	public String getUf() {
-		return uf;
-	}
-
-	public void setUf(String uf) {
-		this.uf = uf;
-	}
+	
 
 	public Date getDataNascimento() {
 		return dataNascimento;
@@ -145,13 +121,6 @@ public class Usuario implements Serializable {
 		this.telefone = telefone;
 	}
 
-	public Date getOcupacao() {
-		return ocupacao;
-	}
-
-	public void setOcupacao(Date ocupacao) {
-		this.ocupacao = ocupacao;
-	}
 
 	public Date getDataHoraAtualizacao() {
 		return dataHoraAtualizacao;
@@ -159,14 +128,6 @@ public class Usuario implements Serializable {
 
 	public void setDataHoraAtualizacao(Date dataHoraAtualizacao) {
 		this.dataHoraAtualizacao = dataHoraAtualizacao;
-	}
-
-	public String getSituacao() {
-		return situacao;
-	}
-
-	public void setSituacao(String situacao) {
-		this.situacao = situacao;
 	}
 
 	public String getSenhaNova() {

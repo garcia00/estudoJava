@@ -6,7 +6,7 @@ import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 
 import br.com.jonathan.model.Usuario;
-import br.com.jonathan.model.UsuarioDAO;
+import br.com.jonathan.service.UsuarioDAO;
 
 @ManagedBean(name = "LoginMB")
 @ViewScoped
@@ -27,8 +27,7 @@ public class LoginManagedBean {
 	      return null;
 	    } else {
 	          return "/main";
-	    }
-	         
+	    }         
 	         
 	  }
 	 

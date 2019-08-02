@@ -1,0 +1,56 @@
+<pretty-config xmlns="http://ocpsoft.org/schema/rewrite-config-prettyfaces"
+			   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			   xsi:schemaLocation="http://ocpsoft.org/schema/rewrite-config-prettyfaces
+                      			   http://ocpsoft.org/xml/ns/prettyfaces/rewrite-config-prettyfaces.xsd">
+		
+	<url-mapping id="login">
+        <pattern value="/login" />
+        <view-id value="/publico/login.jsf" />
+    </url-mapping>	
+    
+    <url-mapping id="cadastro-perito">
+        <pattern value="/cadastro-perito" />
+        <view-id value="/publico/cadastro-perito.jsf" />
+    </url-mapping>	
+    
+    <url-mapping id="novo-edital">
+        <pattern value="/novo-edital" />
+        <view-id value="/cptec/editais/novo-edital.jsf" />
+    </url-mapping>
+    
+    <url-mapping id="visualizar-edital">
+        <pattern value="/visualizar-edital" />
+        <view-id value="/cptec/editais/visualizar-edital.jsf" />
+    </url-mapping>		    	          
+	
+	<url-mapping id="lista-editais">
+        <pattern value="/lista-editais" />
+        <view-id value="/cptec/editais/lista-editais.jsf" />
+    </url-mapping>
+	
+	<url-mapping id="lista-inscritos">
+        <pattern value="/lista-inscritos" />
+        <view-id value="/cptec/editais/lista-inscritos.jsf" />
+    </url-mapping>
+
+	<url-mapping id="detalhes-inscritos">
+        <pattern value="/detalhes-inscritos" />
+        <view-id value="/cptec/editais/detalhes-inscritos.jsf" />
+    </url-mapping>
+    
+    <url-mapping id="comprovante-perito">
+        <pattern value="/comprovante-perito" />
+        <view-id value="/publico/comprovante-perito.jsf" />
+    </url-mapping>   
+        
+    <url-mapping id="peritos-cadastrados">
+        <pattern value="/peritos-cadastrados" />
+        <view-id value="/publico/peritos-cadastrados.jsf" />
+    </url-mapping>
+    
+     <url-mapping id="conciliadores-cadastrados">
+        <pattern value="/conciliadores-cadastrados" />
+        <view-id value="/publico/conciliadores-cadastrados.jsf" />
+    </url-mapping>
+
+</pretty-config>

@@ -1,0 +1,188 @@
+package br.com.jonathan.model;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+
+import br.com.jonathan.util.Md5;
+
+/**
+ *
+ * @author Renan Celso
+ * 
+ */
+@Entity
+@Table(name = "usuario")
+public class Usuario implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@SequenceGenerator(name = "generator_id_usuario", sequenceName = "sq_id_usuario", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name = "id")
+	private Long id;	
+
+	@Column(name = "email", unique = true, nullable = false, length = 255)
+	private String email;
+
+	@Column(name = "senha", nullable = false, length = 255)
+	private String senha;
+
+	@Column(name = "nome_completo", length = 255)
+	private String nomeCompleto;
+
+	@Column(name = "data_nascimento")
+	@Temporal(javax.persistence.TemporalType.DATE)
+	private Date dataNascimento;
+
+	@Column(name = "telefone", length = 50)
+	private Date telefone;
+
+	@Column(name = "datahora_atualizacao")
+	@Temporal(javax.persistence.TemporalType.TIMESTAMP)
+	private Date dataHoraAtualizacao;
+
+	/**
+	 * A = Ativo I = Inativo
+	 */
+	@Column(name = "situacao", nullable = false, length = 10)
+	private String situacao;
+
+	@Column(name = "senha_nova", length = 255)
+	private String senhaNova;
+
+	/**
+	 * PADRAO ADMIN ?????
+	 */
+	@Column(name = "tipo_usuario", length = 30)
+	private String tipoUsuario;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {		
+		this.senha = senha;
+//		if (senha != null && !"".equalsIgnoreCase(senha)) {
+//			this.senha = Md5.getMd5Digest(senha);
+//		} else {
+//			this.senha = senha;
+//		}
+	}
+
+	public String getNomeCompleto() {
+		return nomeCompleto != null ? nomeCompleto : "";
+	}
+
+	public void setNomeCompleto(String nomeCompleto) {
+		this.nomeCompleto = nomeCompleto;
+	}
+
+	
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public Date getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(Date telefone) {
+		this.telefone = telefone;
+	}
+
+
+	public Date getDataHoraAtualizacao() {
+		return dataHoraAtualizacao;
+	}
+
+	public void setDataHoraAtualizacao(Date dataHoraAtualizacao) {
+		this.dataHoraAtualizacao = dataHoraAtualizacao;
+	}
+
+	public String getSituacao() {
+		return situacao;
+	}
+
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
+	}
+
+	public String getSenhaNova() {
+		return senhaNova;
+	}
+
+	public void setSenhaNova(String senhaNova) {
+		if (senhaNova != null && !"".equalsIgnoreCase(senhaNova)) {
+			this.senhaNova = Md5.getMd5Digest(senhaNova);
+		} else {
+			this.senhaNova = senhaNova;
+		}
+	}
+
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Usuario other = (Usuario) obj;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
+	}
+
+}

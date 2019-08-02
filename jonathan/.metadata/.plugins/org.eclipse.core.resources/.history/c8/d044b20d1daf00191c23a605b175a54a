@@ -1,0 +1,39 @@
+package br.com.jonathan.converter;
+
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.convert.Converter;
+import javax.faces.convert.FacesConverter;
+
+import br.jus.tjpa.capjus.model.Cptedital;
+
+@FacesConverter(value = "CpteditalConverter", forClass = Cptedital.class)
+public class CpteditalConverter implements Converter {
+	
+	@Override
+    public Object getAsObject(FacesContext arg0, UIComponent arg1, String arg2) {
+        if (arg2 != null && !"".equalsIgnoreCase(arg2)) {
+        	Cptedital cptedital = (Cptedital) arg1.getAttributes().get(arg2);
+            return cptedital;
+        }
+        return null;
+    }
+
+    @Override
+    public String getAsString(FacesContext context, UIComponent arg1, Object arg2) {
+        try {        	
+            if (arg2 != null && !"".equals(arg2)) {
+            	Cptedital entity = (Cptedital) arg2;
+                String key = entity.getIdedital().toString();
+                arg1.getAttributes().put(key, entity);
+                String codigo = entity.getIdedital().toString();
+                if (codigo != null) {
+                    return codigo;
+                }
+            }            
+            return (String) arg2;            
+        } catch (Exception e) {
+            return "";
+        }
+    }
+}

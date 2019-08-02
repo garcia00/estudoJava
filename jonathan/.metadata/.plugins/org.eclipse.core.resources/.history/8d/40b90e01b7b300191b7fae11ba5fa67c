@@ -1,0 +1,5 @@
+package br.com.jonathan.service;
+
+public class Conection {
+
+}
